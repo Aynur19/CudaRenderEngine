@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{43F474A0-AEF9-40FE-A542-749CF86CE132}</ProjectGuid>
-    <RootNamespace>CudaRenderOpenGL</RootNamespace>
+    <ProjectGuid>{C136EB42-9B83-4CB5-8529-CC93AEB4BD2C}</ProjectGuid>
+    <RootNamespace>CudaOpenGL</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -30,7 +30,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.4.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.5.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -55,6 +55,7 @@
     </Link>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
+      <Include>../libs/libExt;%(Include)</Include>
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -79,8 +80,14 @@
   <ItemGroup>
     <CudaCompile Include="kernel.cu" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VertexBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VertexBuffer.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.4.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.5.targets" />
   </ImportGroup>
 </Project>
