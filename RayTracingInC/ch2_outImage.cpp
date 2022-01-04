@@ -18,6 +18,7 @@ int outImage()
 
 	for (int i = imgHeight - 1; i >= 0; --i)
 	{
+		std::cerr << "\Scanlines remaining: " << i << "\n" << std::flush;
 		for (int j = 0; j < imgWidth; ++j)
 		{
 			auto r = double(j) / (imgWidth - 1);
@@ -32,5 +33,6 @@ int outImage()
 		}
 	}
 
+	std::cerr << "\nDone.\n";
 	return 0;
 }
