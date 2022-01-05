@@ -1,14 +1,9 @@
-#include <iostream>
-#include <fstream>
-
 #include "chapter2.h"
 
-using namespace std;
-
-int renderCPU(const wchar_t* imgFilename, Img img)
+int renderCPU_Ch2(Img img)
 {
-	ofstream imgOut;
-	imgOut.open(imgFilename);
+	std::ofstream imgOut;
+	imgOut.open(img.cImgFilename);
 	imgOut << "P3\n" << img.width << " " << img.height << "\n255\n";
 
 	for (int i = img.height - 1; i >= 0; --i)
@@ -30,24 +25,20 @@ int renderCPU(const wchar_t* imgFilename, Img img)
 
 	imgOut.close();
 	std::cerr << "Done.\n";
-
 	return 0;
 }
 
-int runTest2()
+int runTest_Ch2()
 {
-	const int imgWidth = 512;
-	const int imgHeight = 512;
-
-	const wchar_t* cImgFilename = L"cImage.ppm";
-	const wchar_t* cuImgFilename = L"cuImage.ppm";
-
 	Img img = {};
 	Block block = {};
 
-	renderCPU(cImgFilename, img);
+	img.cImgFilename = L"output/ср2_cImage.ppm";
+	img.cuImgFilename = L"output/ср2_cuImage.ppm";
+
+	renderCPU_Ch2(img);
 	std::cout << std::endl;
-	renderGPU(cuImgFilename, img, block);
+	renderGPU_Ch2(img, block);
 
 	return 0;
 }

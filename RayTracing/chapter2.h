@@ -3,20 +3,10 @@
 #include <iostream>
 #include <fstream>
 
-struct Img
-{
-	int width = 1200;
-	int height = 600;
-};
+#include "structs.h"
 
-struct Block
-{
-	int tx = 32;
-	int ty = 32;
-};
+int renderGPU_Ch2(Img img, Block block);
 
-int renderGPU(const wchar_t* imgFilename, Img img, Block block);
+int renderCPU_Ch2(Img img);
 
-int renderCPU(const wchar_t* imgFilename, Img img);
-
-int runTest2();
+int runTest_Ch2();

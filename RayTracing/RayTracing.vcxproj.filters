@@ -5,20 +5,44 @@
     <ClCompile Include="chapter2.cpp">
       <Filter>chapter2</Filter>
     </ClCompile>
+    <ClCompile Include="chapter3.cpp">
+      <Filter>chapter3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="chapter2">
       <UniqueIdentifier>{b7f369d5-4ca0-4693-97c9-61d42b6b2de7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="chapter3">
+      <UniqueIdentifier>{3ec4d5d4-7b79-4083-8d77-f63003192738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{0886e109-ceb0-4594-a89f-f72d6404d449}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chapter2.h">
       <Filter>chapter2</Filter>
     </ClInclude>
+    <ClInclude Include="chapter3.h">
+      <Filter>chapter3</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="structs.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.cuh">
+      <Filter>common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CudaCompile Include="kernelCh2.cu">
+    <CudaCompile Include="kernel_Ch2.cu">
       <Filter>chapter2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="kernel_Ch3.cu">
+      <Filter>chapter3</Filter>
     </CudaCompile>
   </ItemGroup>
 </Project>
