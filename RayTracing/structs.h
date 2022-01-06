@@ -5,6 +5,7 @@ struct Img
 	wchar_t* cImgFilename = L"cImage.ppm";
 	wchar_t* cuImgFilename = L"cuImage.ppm";
 
+	int aspectRatio = 0;
 	int width = 1200;
 	int height = 600;
 };

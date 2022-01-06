@@ -84,14 +84,18 @@
   <ItemGroup>
     <ClCompile Include="chapter2.cpp" />
     <ClCompile Include="chapter3.cpp" />
+    <ClCompile Include="chapter_04.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="chapter2.h" />
     <ClInclude Include="chapter3.h" />
+    <ClInclude Include="chapter_04.h" />
     <ClInclude Include="color.h" />
+    <ClInclude Include="ray.h" />
     <ClInclude Include="structs.h" />
-    <ClInclude Include="vec3.cuh" />
+    <ClInclude Include="vec3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

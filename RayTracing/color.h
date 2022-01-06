@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "vec3.cuh"
+#include "vec3.h"
 
 template<typename T>
 void writeColor(T& out, color pColor)

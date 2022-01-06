@@ -3,7 +3,7 @@
 #include <fstream>
 
 #include "structs.h"
-#include "vec3.cuh"
+#include "vec3.h"
 #include "color.h"
 
 int renderCPU_Ch3(Img img);
